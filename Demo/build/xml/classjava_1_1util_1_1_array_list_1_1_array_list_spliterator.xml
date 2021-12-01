@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="classjava_1_1util_1_1_array_list_1_1_array_list_spliterator" kind="class" language="Java" prot="package">
+    <compoundname>java::util::ArrayList::ArrayListSpliterator</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Spliterator&lt; E &gt;</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classjava_1_1util_1_1_array_list_1_1_array_list_spliterator_1a01e746b5464da3054923d5774f724278" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int java.util.ArrayList&lt; E &gt;.ArrayListSpliterator.index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="1598" column="21" bodyfile="ArrayList.java" bodystart="1598" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classjava_1_1util_1_1_array_list_1_1_array_list_spliterator_1aeceaab8d9eee2bddbdb126ad1942310d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int java.util.ArrayList&lt; E &gt;.ArrayListSpliterator.fence</definition>
+        <argsstring></argsstring>
+        <name>fence</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="1599" column="21" bodyfile="ArrayList.java" bodystart="1599" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classjava_1_1util_1_1_array_list_1_1_array_list_spliterator_1aaa46abb8e646868b6c5c60f20e7dbd87" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int java.util.ArrayList&lt; E &gt;.ArrayListSpliterator.expectedModCount</definition>
+        <argsstring></argsstring>
+        <name>expectedModCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="1600" column="21" bodyfile="ArrayList.java" bodystart="1600" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-func">
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1_1_array_list_spliterator_1a1873055b54a75a97d8a6a9817fb6045e" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>java.util.ArrayList&lt; E &gt;.ArrayListSpliterator.ArrayListSpliterator</definition>
+        <argsstring>(int origin, int fence, int expectedModCount)</argsstring>
+        <name>ArrayListSpliterator</name>
+        <param>
+          <type>int</type>
+          <declname>origin</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>fence</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>expectedModCount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates new spliterator covering the given range. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="1603" column="9" bodyfile="ArrayList.java" bodystart="1603" bodyend="1607"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1_1_array_list_spliterator_1a66c699ebfaa7a550544c98b75a452bad" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int java.util.ArrayList&lt; E &gt;.ArrayListSpliterator.getFence</definition>
+        <argsstring>()</argsstring>
+        <name>getFence</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="1609" column="21" bodyfile="ArrayList.java" bodystart="1609" bodyend="1616"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1_1_array_list_spliterator_1ab62622830dcfc95f1b908e2bd8256afd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ArrayListSpliterator</type>
+        <definition>ArrayListSpliterator java.util.ArrayList&lt; E &gt;.ArrayListSpliterator.trySplit</definition>
+        <argsstring>()</argsstring>
+        <name>trySplit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="1618" column="37" bodyfile="ArrayList.java" bodystart="1618" bodyend="1622"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1_1_array_list_spliterator_1a810c28bb610c649e5816269385063c4a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean java.util.ArrayList&lt; E &gt;.ArrayListSpliterator.tryAdvance</definition>
+        <argsstring>(Consumer&lt;? super E &gt; action)</argsstring>
+        <name>tryAdvance</name>
+        <param>
+          <type>Consumer&lt;? super E &gt;</type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="1624" column="24" bodyfile="ArrayList.java" bodystart="1624" bodyend="1637"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1_1_array_list_spliterator_1a82b930588cff42988afada0f55054376" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void java.util.ArrayList&lt; E &gt;.ArrayListSpliterator.forEachRemaining</definition>
+        <argsstring>(Consumer&lt;? super E &gt; action)</argsstring>
+        <name>forEachRemaining</name>
+        <param>
+          <type>Consumer&lt;? super E &gt;</type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="1639" column="21" bodyfile="ArrayList.java" bodystart="1639" bodyend="1661"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1_1_array_list_spliterator_1a661b8b77cc2a422674b617169c16bb3a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>long</type>
+        <definition>long java.util.ArrayList&lt; E &gt;.ArrayListSpliterator.estimateSize</definition>
+        <argsstring>()</argsstring>
+        <name>estimateSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="1663" column="21" bodyfile="ArrayList.java" bodystart="1663" bodyend="1665"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1_1_array_list_spliterator_1aedabd832bec8731dce65caf0d9ce02f4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int java.util.ArrayList&lt; E &gt;.ArrayListSpliterator.characteristics</definition>
+        <argsstring>()</argsstring>
+        <name>characteristics</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="1667" column="20" bodyfile="ArrayList.java" bodystart="1667" bodyend="1669"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Index-based split-by-two, lazily initialized Spliterator </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Spliterator&lt; E &gt;</label>
+      </node>
+      <node id="1">
+        <label>java.util.ArrayList&lt; E &gt;.ArrayListSpliterator</label>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Spliterator&lt; E &gt;</label>
+      </node>
+      <node id="1">
+        <label>java.util.ArrayList&lt; E &gt;.ArrayListSpliterator</label>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ArrayList.java" line="1564" column="10" bodyfile="ArrayList.java" bodystart="1564" bodyend="1670"/>
+    <listofallmembers>
+      <member refid="classjava_1_1util_1_1_array_list_1_1_array_list_spliterator_1a1873055b54a75a97d8a6a9817fb6045e" prot="package" virt="non-virtual"><scope>java::util::ArrayList::ArrayListSpliterator</scope><name>ArrayListSpliterator</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1_1_array_list_spliterator_1aedabd832bec8731dce65caf0d9ce02f4" prot="public" virt="non-virtual"><scope>java::util::ArrayList::ArrayListSpliterator</scope><name>characteristics</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1_1_array_list_spliterator_1a661b8b77cc2a422674b617169c16bb3a" prot="public" virt="non-virtual"><scope>java::util::ArrayList::ArrayListSpliterator</scope><name>estimateSize</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1_1_array_list_spliterator_1aaa46abb8e646868b6c5c60f20e7dbd87" prot="private" virt="non-virtual"><scope>java::util::ArrayList::ArrayListSpliterator</scope><name>expectedModCount</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1_1_array_list_spliterator_1aeceaab8d9eee2bddbdb126ad1942310d" prot="private" virt="non-virtual"><scope>java::util::ArrayList::ArrayListSpliterator</scope><name>fence</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1_1_array_list_spliterator_1a82b930588cff42988afada0f55054376" prot="public" virt="non-virtual"><scope>java::util::ArrayList::ArrayListSpliterator</scope><name>forEachRemaining</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1_1_array_list_spliterator_1a66c699ebfaa7a550544c98b75a452bad" prot="private" virt="non-virtual"><scope>java::util::ArrayList::ArrayListSpliterator</scope><name>getFence</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1_1_array_list_spliterator_1a01e746b5464da3054923d5774f724278" prot="private" virt="non-virtual"><scope>java::util::ArrayList::ArrayListSpliterator</scope><name>index</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1_1_array_list_spliterator_1a810c28bb610c649e5816269385063c4a" prot="public" virt="non-virtual"><scope>java::util::ArrayList::ArrayListSpliterator</scope><name>tryAdvance</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1_1_array_list_spliterator_1ab62622830dcfc95f1b908e2bd8256afd" prot="public" virt="non-virtual"><scope>java::util::ArrayList::ArrayListSpliterator</scope><name>trySplit</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

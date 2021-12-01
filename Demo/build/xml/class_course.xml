@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_course" kind="class" language="Java" prot="package">
+    <compoundname>Course</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_course_1ab74b7dd173e99f6526b367546a533430" prot="private" static="yes" mutable="no">
+        <type>final String[]</type>
+        <definition>final String [] Course.availableCourses</definition>
+        <argsstring></argsstring>
+        <name>availableCourses</name>
+        <initializer>= { &quot;English&quot;, &quot;Mathematics&quot;, &quot;Chemistry&quot;, &quot;Physics&quot; }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="course.java" line="6" column="33" bodyfile="course.java" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_course_1a2a67fc62599401b971066ff079293b03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String Course.getCourses</definition>
+        <argsstring>(String student)</argsstring>
+        <name>getCourses</name>
+        <param>
+          <type>String</type>
+          <declname>student</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>student</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the value should not be greater than 10. The value should be an alphabetical string. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>All courses should be in the availableCourses. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="course.java" line="12" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_course_1ad7d0bd75a821625d4a49ae372c7cc6a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Course.addCourseForStudent</definition>
+        <argsstring>(String student, String course)</argsstring>
+        <name>addCourseForStudent</name>
+        <param>
+          <type>String</type>
+          <declname>student</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>course</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>student</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the value should not be greater than 10. The value should be an alphabetical string. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>course</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The course should be in the availableCourses. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 if the course is added successfully. -1 if the course is not in availableCourses. 2 if the student has already chosen the course. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="course.java" line="19" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_course_1a59435383eb1e4fd5021f026bcef56e99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String Course.removeCourseForStudent</definition>
+        <argsstring>(String student, String course)</argsstring>
+        <name>removeCourseForStudent</name>
+        <param>
+          <type>String</type>
+          <declname>student</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>course</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>student</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the value should not be greater than 10. The value should be an alphabetical string. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>course</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The course should be in the availableCourses. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 if the course is removed successfully. -1 if the course is not in availableCourses. 2 if the student has not chosen the course. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="course.java" line="26" column="19"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="course.java" line="1" column="1" bodyfile="course.java" bodystart="1" bodyend="27"/>
+    <listofallmembers>
+      <member refid="class_course_1ad7d0bd75a821625d4a49ae372c7cc6a9" prot="public" virt="non-virtual"><scope>Course</scope><name>addCourseForStudent</name></member>
+      <member refid="class_course_1ab74b7dd173e99f6526b367546a533430" prot="private" virt="non-virtual"><scope>Course</scope><name>availableCourses</name></member>
+      <member refid="class_course_1a2a67fc62599401b971066ff079293b03" prot="public" virt="non-virtual"><scope>Course</scope><name>getCourses</name></member>
+      <member refid="class_course_1a59435383eb1e4fd5021f026bcef56e99" prot="public" virt="non-virtual"><scope>Course</scope><name>removeCourseForStudent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

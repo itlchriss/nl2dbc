@@ -1,0 +1,94 @@
+# A Context Free Grammar for English follows the definitions in the book
+# "A Student's Introduction To English Grammar by Huddleston Rodney & Pullum Geoffrey (Cambridge) 2nd Edition"
+# The Penn Treebank POS tagset
+
+# 1. CC  Coordinating conjunction  25.TO  to
+# 2. CD  Cardinal number           26.UH  Interjection
+# 3. DT  Determiner                27.VB  Verb, base form
+# 4. EX  Existential there  	 28.VBD Verb, past tense
+# 5. FW  Foreign word              29.VBG Verb, gerund/present participle
+# 6. IN  Preposition/subord.  	 30.VBN Verb, past participle
+# 218z     conjunction
+# 7. JJ  Adjective                 31.VBP Verb, non-3rd ps. sing. present
+# 8. JJR Adjective, comparative    32.VBZ Verb, 3rd ps. sing. present
+# 9. JJS Adjective, superlative    33.WDT wh-determiner
+# 10.LS  List item marker          34.WP  wh-pronoun
+# 11.MD  Modal                     35.WP  Possessive wh-pronoun
+# 12.NN  Noun, singular or mass    36.WRB wh-adverb
+# 13.NNS Noun, plural              37. #  Pound sign
+# 14.NNP Proper noun, singular     38. $  Dollar sign
+# 15.NNPS Proper noun, plural      39. .  Sentence-final punctuation
+# 16.PDT Predeterminer             40. ,  Comma
+# 17.POS Possessive ending         41. :  Colon, semi-colon
+# 18.PRP Personal pronoun          42. (  Left bracket character
+# 19.PP  Possessive pronoun        43. )  Right bracket character
+# 20.RB  Adverb                    44. "  Straight double quote
+# 21.RBR Adverb, comparative       45. `  Left open single quote
+# 22.RBS Adverb, superlative       46. "  Left open double quote
+# 23.RP  Particle                  47. '  Right close single quote
+# 24.SYM Symbol 			 48. "  Right close double quote
+# ###################
+# Grammar Productions
+# ###################
+% start SS
+# Conjunctions
+SS[CNL=?s] -> S[CNL=?s]
+SS[CNL=(?s + ?ss)] -> S[CNL=?s] SS[CNL=?ss]
+SS[CNL=(?cc + ?s)] -> CC[CNL=?cc] S[CNL=?s]
+
+
+# Sentence expansion productions
+# Declarative
+S[CNL=(?np + ?vps)] -> NP[CNL=?np] VERB_PHRASES[CNL=?vps]
+# Imperative
+S -> VP
+
+
+NP[CNL=?sub] -> DT SUBJECT[CNL=?sub] | SUBJECT[CNL=?sub]
+
+VERB_PHRASES[CNL=?vp] -> VERB_PHRASE[CNL=?vp]
+VERB_PHRASES[CNL=(?vp1 + ?vps)] -> VERB_PHRASE[CNL=?vp1] VERB_PHRASES[CNL=?vps]
+VERB_PHRASES[CNL=(?cc + '[**KEY**]' + ?vp)] -> CC[CNL=?cc] VERB_PHRASE[CNL=?vp]
+VERB_PHRASE[CNL=(?v + ?objs)] -> VERB[CNL=?v] OBJECTS[CNL=?objs]
+
+SUBJECT[CNL=?nn] -> NN[CNL=?nn]
+SUBJECT[CNL=(?nn + '.' + ?attr)] -> ATTR_MODIFIER[CNL=?attr] DT NN[CNL=?nn]
+
+ATTR_MODIFIER[CNL=(?nn + '()')] -> NN[CNL=?nn] IN
+
+VERB[CNL=('!' + ?vb)] -> 'not' VB[CNL=?vb]
+VERB[CNL=?vb] -> 'always' VB[CNL=?vb]
+VERB[CNL=?vb] -> VB[CNL=?vb]
+
+
+OBJECTS[CNL=?obj] -> OBJECT[CNL=?obj]
+OBJECTS[CNL=(?obj1 + ?objs)] -> OBJECT[CNL=?obj1] OBJECTS[CNL=?objs]
+OBJECTS[CNL=(?cc + '[**KEY**]' + ?obj)] -> CC[CNL=?cc] OBJECT[CNL=?obj]
+OBJECT[CNL=?jj] -> JJ[CNL=?jj]
+OBJECT[CNL=(?jj + ?var)] -> JJ[CNL=?jj] 'than' VAR[CNL=?var]
+OBJECT[CNL=(?vb + ?var)] -> VB[CNL=?jj] 'to' VAR[CNL=?var]
+#OBJECT[CNL=('("' + ?nn + '")')] -> NN[CNL=?nn] 'only' | 'only' NN[CNL=?nn]
+
+VAR[CNL=?var] -> CD[CNL=?var] | NN[CNL=?var]
+
+NKEY[CNL=?nkey] -> NKEY[CNL=?nkey] NP
+NKEY[CNL=?np] -> '[' NP[CNL=?np] ']'
+
+# ###################
+# Lexeme Productions
+# ###################
+DT[CNL=''] -> 'the' | 'a' | 'The' | 'A' | 'this'
+#POS -> "'s"
+RB[CNL='!'] -> 'not'
+#MD[CNL=''] -> 'shall' | 'should' | 'can' | 'could' | 'may' | 'might' | 'will' | 'would' | 'ought' | 'dare' | 'need' | 'must'
+CC[CNL='&&'] -> 'and'
+CC[CNL='||'] -> 'or'
+#NN[CNL=''] -> 'argument' | 'parameter'
+NN[CNL='[a-zA-Z]+'] -> 'alphabet'
+JJ[CNL='null'] -> 'null'
+JJ[CNL='<'] -> 'less'
+JJ[CNL='>'] -> 'great'
+VB[CNL='='] -> 'be' | 'equal'
+VB[CNL='.matches'] -> 'contain'
+#OP[+EQ] -> '='
+

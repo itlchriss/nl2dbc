@@ -1,0 +1,2055 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="classjava_1_1util_1_1_array_list" kind="class" language="Java" prot="public">
+    <compoundname>java::util::ArrayList</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">AbstractList&lt; E &gt;</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">List&lt; E &gt;</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">RandomAccess</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">Cloneable</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">java.io.Serializable</basecompoundref>
+    <innerclass refid="classjava_1_1util_1_1_array_list_1_1_array_list_spliterator" prot="package">java::util::ArrayList::ArrayListSpliterator</innerclass>
+    <innerclass refid="classjava_1_1util_1_1_array_list_1_1_itr" prot="private">java::util::ArrayList::Itr</innerclass>
+    <innerclass refid="classjava_1_1util_1_1_array_list_1_1_list_itr" prot="private">java::util::ArrayList::ListItr</innerclass>
+    <innerclass refid="classjava_1_1util_1_1_array_list_1_1_sub_list" prot="private">java::util::ArrayList::SubList</innerclass>
+    <templateparamlist>
+      <param>
+        <type>E</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classjava_1_1util_1_1_array_list_1a1c3c7f2cec17c4e979e167cf3c66bb55" prot="private" static="yes" mutable="no">
+        <type>final long</type>
+        <definition>final long java.util.ArrayList&lt; E &gt;.serialVersionUID</definition>
+        <argsstring></argsstring>
+        <name>serialVersionUID</name>
+        <initializer>= 8683452581122892189L</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="111" column="31" bodyfile="ArrayList.java" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classjava_1_1util_1_1_array_list_1ad3c466fef8ac72c28f6765d035cfc639" prot="private" static="yes" mutable="no">
+        <type>final int</type>
+        <definition>final int java.util.ArrayList&lt; E &gt;.DEFAULT_CAPACITY</definition>
+        <argsstring></argsstring>
+        <name>DEFAULT_CAPACITY</name>
+        <initializer>= 10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default initial capacity. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="116" column="30" bodyfile="ArrayList.java" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classjava_1_1util_1_1_array_list_1ad662cd8025893653ef2c6c6cae5cc278" prot="private" static="yes" mutable="no">
+        <type>final Object[]</type>
+        <definition>final Object [] java.util.ArrayList&lt; E &gt;.EMPTY_ELEMENTDATA</definition>
+        <argsstring></argsstring>
+        <name>EMPTY_ELEMENTDATA</name>
+        <initializer>= {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Shared empty array instance used for empty instances. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="121" column="33" bodyfile="ArrayList.java" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classjava_1_1util_1_1_array_list_1a36f63f677717a8d151d6fc80dd7a0c12" prot="private" static="yes" mutable="no">
+        <type>final Object[]</type>
+        <definition>final Object [] java.util.ArrayList&lt; E &gt;.DEFAULTCAPACITY_EMPTY_ELEMENTDATA</definition>
+        <argsstring></argsstring>
+        <name>DEFAULTCAPACITY_EMPTY_ELEMENTDATA</name>
+        <initializer>= {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Shared empty array instance used for default sized empty instances. We distinguish this from EMPTY_ELEMENTDATA to know how much to inflate when first element is added. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="128" column="33" bodyfile="ArrayList.java" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classjava_1_1util_1_1_array_list_1a5082aae25ff63ad53ec52c6011553e85" prot="private" static="yes" mutable="no">
+        <type>final int</type>
+        <definition>final int java.util.ArrayList&lt; E &gt;.MAX_ARRAY_SIZE</definition>
+        <argsstring></argsstring>
+        <name>MAX_ARRAY_SIZE</name>
+        <initializer>= Integer.MAX_VALUE - 8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The maximum size of array to allocate (unless necessary). Some VMs reserve some header words in an array. Attempts to allocate larger arrays may result in OutOfMemoryError: Requested array size exceeds VM limit </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="227" column="30" bodyfile="ArrayList.java" bodystart="227" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-attrib">
+      <memberdef kind="variable" id="classjava_1_1util_1_1_array_list_1ad7c4762ac473fcba014fc5c5bb6a2946" prot="package" static="no" mutable="no">
+        <type>transient Object[]</type>
+        <definition>transient Object [] java.util.ArrayList&lt; E &gt;.elementData</definition>
+        <argsstring></argsstring>
+        <name>elementData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The array buffer into which the elements of the <ref refid="classjava_1_1util_1_1_array_list" kindref="compound">ArrayList</ref> are stored. The capacity of the <ref refid="classjava_1_1util_1_1_array_list" kindref="compound">ArrayList</ref> is the length of this array buffer. Any empty <ref refid="classjava_1_1util_1_1_array_list" kindref="compound">ArrayList</ref> with elementData == DEFAULTCAPACITY_EMPTY_ELEMENTDATA will be expanded to DEFAULT_CAPACITY when the first element is added. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="136" column="22" bodyfile="ArrayList.java" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classjava_1_1util_1_1_array_list_1ae901fcea3ff0c5c6b35e32bc99c73414" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int java.util.ArrayList&lt; E &gt;.size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The size of the <ref refid="classjava_1_1util_1_1_array_list" kindref="compound">ArrayList</ref> (the number of elements it contains).</para>
+<para>@serial </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="143" column="17" bodyfile="ArrayList.java" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1adaea4255934eb868f9abff20d0d7eb62" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>java.util.ArrayList&lt; E &gt;.ArrayList</definition>
+        <argsstring>(int initialCapacity)</argsstring>
+        <name>ArrayList</name>
+        <param>
+          <type>int</type>
+          <declname>initialCapacity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs an empty list with the specified initial capacity.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>initialCapacity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the initial capacity of the list </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IllegalArgumentException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the specified initial capacity is negative </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="152" column="12" bodyfile="ArrayList.java" bodystart="152" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1a50fb40ee9ef69183738251e7f613301e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>java.util.ArrayList&lt; E &gt;.ArrayList</definition>
+        <argsstring>()</argsstring>
+        <name>ArrayList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs an empty list with an initial capacity of ten. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="166" column="12" bodyfile="ArrayList.java" bodystart="166" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1a7c1dacbd9bed44a2eb8dc240e42667c0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>java.util.ArrayList&lt; E &gt;.ArrayList</definition>
+        <argsstring>(Collection&lt;? extends E &gt; c)</argsstring>
+        <name>ArrayList</name>
+        <param>
+          <type>Collection&lt;? extends E &gt;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a list containing the elements of the specified collection, in the order they are returned by the collection&apos;s iterator.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the collection whose elements are to be placed into this list </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>NullPointerException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the specified collection is null </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="178" column="12" bodyfile="ArrayList.java" bodystart="178" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1afe1e26a716512bf0179f2f97b04ff0d3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void java.util.ArrayList&lt; E &gt;.trimToSize</definition>
+        <argsstring>()</argsstring>
+        <name>trimToSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Trims the capacity of this <programlisting><codeline><highlight class="normal"><ref refid="classjava_1_1util_1_1_array_list_1a50fb40ee9ef69183738251e7f613301e" kindref="member">ArrayList</ref><sp/></highlight></codeline>
+</programlisting> instance to be the list&apos;s current size. An application can use this operation to minimize the storage of an <programlisting><codeline><highlight class="normal"><ref refid="classjava_1_1util_1_1_array_list_1a50fb40ee9ef69183738251e7f613301e" kindref="member">ArrayList</ref><sp/></highlight></codeline>
+</programlisting> instance. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="196" column="17" bodyfile="ArrayList.java" bodystart="196" bodyend="203"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1a071e6ee16f1f6edf0c3795c14d6127a8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void java.util.ArrayList&lt; E &gt;.ensureCapacity</definition>
+        <argsstring>(int minCapacity)</argsstring>
+        <name>ensureCapacity</name>
+        <param>
+          <type>int</type>
+          <declname>minCapacity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Increases the capacity of this <programlisting><codeline><highlight class="normal"><ref refid="classjava_1_1util_1_1_array_list_1a50fb40ee9ef69183738251e7f613301e" kindref="member">ArrayList</ref><sp/></highlight></codeline>
+</programlisting> instance, if necessary, to ensure that it can hold at least the number of elements specified by the minimum capacity argument.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>minCapacity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the desired minimum capacity </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="212" column="17" bodyfile="ArrayList.java" bodystart="212" bodyend="219"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1aa1f83fdecc8f4f7335deb0309a47dff3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int java.util.ArrayList&lt; E &gt;.size</definition>
+        <argsstring>()</argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the number of elements in this list.</para>
+<para><simplesect kind="return"><para>the number of elements in this list </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="283" column="16" bodyfile="ArrayList.java" bodystart="283" bodyend="285"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1a89cb90408a8b5c55fb7ae1bd69452e30" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean java.util.ArrayList&lt; E &gt;.isEmpty</definition>
+        <argsstring>()</argsstring>
+        <name>isEmpty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns <programlisting><codeline><highlight class="keyword">true</highlight><highlight class="normal"><sp/></highlight></codeline>
+</programlisting> if this list contains no elements.</para>
+<para><simplesect kind="return"><para><programlisting><codeline><highlight class="keyword">true</highlight><highlight class="normal"><sp/></highlight></codeline>
+</programlisting> if this list contains no elements </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="292" column="20" bodyfile="ArrayList.java" bodystart="292" bodyend="294"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1ae060a010246638f3ff4749ffe0b62bab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean java.util.ArrayList&lt; E &gt;.contains</definition>
+        <argsstring>(Object o)</argsstring>
+        <name>contains</name>
+        <param>
+          <type>Object</type>
+          <declname>o</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns <programlisting><codeline><highlight class="keyword">true</highlight><highlight class="normal"><sp/></highlight></codeline>
+</programlisting> if this list contains the specified element. More formally, returns <programlisting><codeline><highlight class="keyword">true</highlight><highlight class="normal"><sp/></highlight></codeline>
+</programlisting> if and only if this list contains at least one element <programlisting><codeline><highlight class="normal">e<sp/></highlight></codeline>
+</programlisting> such that <programlisting><codeline><highlight class="normal">Objects.equals(o,<sp/>e)<sp/></highlight></codeline>
+</programlisting> .</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>o</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>element whose presence in this list is to be tested </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><programlisting><codeline><highlight class="keyword">true</highlight><highlight class="normal"><sp/></highlight></codeline>
+</programlisting> if this list contains the specified element </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="305" column="20" bodyfile="ArrayList.java" bodystart="305" bodyend="307"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1aee170e25c3df453eda3628ff784bf4e0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int java.util.ArrayList&lt; E &gt;.indexOf</definition>
+        <argsstring>(Object o)</argsstring>
+        <name>indexOf</name>
+        <param>
+          <type>Object</type>
+          <declname>o</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the index of the first occurrence of the specified element in this list, or -1 if this list does not contain the element. More formally, returns the lowest index <programlisting><codeline><highlight class="normal">i<sp/></highlight></codeline>
+</programlisting> such that <programlisting><codeline><highlight class="normal">Objects.equals(o,<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">(i))<sp/></highlight></codeline>
+</programlisting> , or -1 if there is no such index. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="316" column="16" bodyfile="ArrayList.java" bodystart="316" bodyend="318"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1a8b32d7954659694aa9ceb4f4bc6d644f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int java.util.ArrayList&lt; E &gt;.lastIndexOf</definition>
+        <argsstring>(Object o)</argsstring>
+        <name>lastIndexOf</name>
+        <param>
+          <type>Object</type>
+          <declname>o</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the index of the last occurrence of the specified element in this list, or -1 if this list does not contain the element. More formally, returns the highest index <programlisting><codeline><highlight class="normal">i<sp/></highlight></codeline>
+</programlisting> such that <programlisting><codeline><highlight class="normal">Objects.equals(o,<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">(i))<sp/></highlight></codeline>
+</programlisting> , or -1 if there is no such index. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="345" column="16" bodyfile="ArrayList.java" bodystart="345" bodyend="347"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1a6fc2f71289b8ce4daaf480c48fecd3e9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Object</type>
+        <definition>Object java.util.ArrayList&lt; E &gt;.clone</definition>
+        <argsstring>()</argsstring>
+        <name>clone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a shallow copy of this <programlisting><codeline><highlight class="normal"><ref refid="classjava_1_1util_1_1_array_list_1a50fb40ee9ef69183738251e7f613301e" kindref="member">ArrayList</ref><sp/></highlight></codeline>
+</programlisting> instance. (The elements themselves are not copied.)</para>
+<para><simplesect kind="return"><para>a clone of this <programlisting><codeline><highlight class="normal"><ref refid="classjava_1_1util_1_1_array_list_1a50fb40ee9ef69183738251e7f613301e" kindref="member">ArrayList</ref><sp/></highlight></codeline>
+</programlisting> instance </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="373" column="19" bodyfile="ArrayList.java" bodystart="373" bodyend="383"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1acf3b031fbe639f574bc4c2007ab35c4b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Object[]</type>
+        <definition>Object[] java.util.ArrayList&lt; E &gt;.toArray</definition>
+        <argsstring>()</argsstring>
+        <name>toArray</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns an array containing all of the elements in this list in proper sequence (from first to last element).</para>
+<para>The returned array will be &quot;safe&quot; in that no references to it are maintained by this list. (In other words, this method must allocate a new array). The caller is thus free to modify the returned array.</para>
+<para>This method acts as bridge between array-based and collection-based APIs.</para>
+<para><simplesect kind="return"><para>an array containing all of the elements in this list in proper sequence </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="399" column="19" bodyfile="ArrayList.java" bodystart="399" bodyend="401"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1a2a0f35b259bd3ca95ca8f27ae21b9067" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>E</type>
+        <definition>E java.util.ArrayList&lt; E &gt;.get</definition>
+        <argsstring>(int index)</argsstring>
+        <name>get</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the element at the specified position in this list.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of the element to return </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the element at the specified position in this list </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IndexOutOfBoundsException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="457" column="14" bodyfile="ArrayList.java" bodystart="457" bodyend="460"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1a5f7c1a0bd37927909cc3c08e99486de6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>E</type>
+        <definition>E java.util.ArrayList&lt; E &gt;.set</definition>
+        <argsstring>(int index, E element)</argsstring>
+        <name>set</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>E</type>
+          <declname>element</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Replaces the element at the specified position in this list with the specified element.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of the element to replace </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>element</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>element to be stored at the specified position </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the element previously at the specified position </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IndexOutOfBoundsException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="471" column="14" bodyfile="ArrayList.java" bodystart="471" bodyend="476"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1abd6c83f9b52fc889760c0ac0eeeb3514" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean java.util.ArrayList&lt; E &gt;.add</definition>
+        <argsstring>(E e)</argsstring>
+        <name>add</name>
+        <param>
+          <type>E</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Appends the specified element to the end of this list.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>element to be appended to this list </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><programlisting><codeline><highlight class="keyword">true</highlight><highlight class="normal"><sp/></highlight></codeline>
+</programlisting> (as specified by <ref refid="" kindref="compound">Collection#add</ref>) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="496" column="20" bodyfile="ArrayList.java" bodystart="496" bodyend="500"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1ae429d4d5322c76a9f7f9d6cf9a698c8a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void java.util.ArrayList&lt; E &gt;.add</definition>
+        <argsstring>(int index, E element)</argsstring>
+        <name>add</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>E</type>
+          <declname>element</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Inserts the specified element at the specified position in this list. Shifts the element currently at that position (if any) and any subsequent elements to the right (adds one to their indices).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index at which the specified element is to be inserted </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>element</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>element to be inserted </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IndexOutOfBoundsException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="511" column="17" bodyfile="ArrayList.java" bodystart="511" bodyend="523"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1a4828dbd75167ac907cdbd8660b961ea3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>E</type>
+        <definition>E java.util.ArrayList&lt; E &gt;.remove</definition>
+        <argsstring>(int index)</argsstring>
+        <name>remove</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Removes the element at the specified position in this list. Shifts any subsequent elements to the left (subtracts one from their indices).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the index of the element to be removed </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the element that was removed from the list </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IndexOutOfBoundsException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="534" column="14" bodyfile="ArrayList.java" bodystart="534" bodyend="542"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1a336addce74eadff4e0f75eb7750653b5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean java.util.ArrayList&lt; E &gt;.equals</definition>
+        <argsstring>(Object o)</argsstring>
+        <name>equals</name>
+        <param>
+          <type>Object</type>
+          <declname>o</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="547" column="20" bodyfile="ArrayList.java" bodystart="547" bodyend="565"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1a842cf9bcce33f486ae9b4783d2307703" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int java.util.ArrayList&lt; E &gt;.hashCode</definition>
+        <argsstring>()</argsstring>
+        <name>hashCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="611" column="16" bodyfile="ArrayList.java" bodystart="611" bodyend="616"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1a7a894c2a2434280f8170387d48b861d3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean java.util.ArrayList&lt; E &gt;.remove</definition>
+        <argsstring>(Object o)</argsstring>
+        <name>remove</name>
+        <param>
+          <type>Object</type>
+          <declname>o</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Removes the first occurrence of the specified element from this list, if it is present. If the list does not contain the element, it is unchanged. More formally, removes the element with the lowest index <programlisting><codeline><highlight class="normal">i<sp/></highlight></codeline>
+</programlisting> such that <programlisting><codeline><highlight class="normal">Objects.equals(o,<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">(i))<sp/></highlight></codeline>
+</programlisting> (if such an element exists). Returns <programlisting><codeline><highlight class="keyword">true</highlight><highlight class="normal"><sp/></highlight></codeline>
+</programlisting> if this list contained the specified element (or equivalently, if this list changed as a result of the call).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>o</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>element to be removed from this list, if present </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><programlisting><codeline><highlight class="keyword">true</highlight><highlight class="normal"><sp/></highlight></codeline>
+</programlisting> if this list contained the specified element </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="644" column="20" bodyfile="ArrayList.java" bodystart="644" bodyend="662"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1aa607d32031984297108864c20b031a09" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void java.util.ArrayList&lt; E &gt;.clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Removes all of the elements from this list. The list will be empty after this call returns. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="680" column="17" bodyfile="ArrayList.java" bodystart="680" bodyend="685"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1a4a27fe3dfc816acb32582b7025069935" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean java.util.ArrayList&lt; E &gt;.addAll</definition>
+        <argsstring>(Collection&lt;? extends E &gt; c)</argsstring>
+        <name>addAll</name>
+        <param>
+          <type>Collection&lt;? extends E &gt;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Appends all of the elements in the specified collection to the end of this list, in the order that they are returned by the specified collection&apos;s Iterator. The behavior of this operation is undefined if the specified collection is modified while the operation is in progress. (This implies that the behavior of this call is undefined if the specified collection is this list, and this list is nonempty.)</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>collection containing elements to be added to this list </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><programlisting><codeline><highlight class="keyword">true</highlight><highlight class="normal"><sp/></highlight></codeline>
+</programlisting> if this list changed as a result of the call </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>NullPointerException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the specified collection is null </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="700" column="20" bodyfile="ArrayList.java" bodystart="700" bodyend="713"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1a75e0c82eae78f49fe5b738f851f000ba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean java.util.ArrayList&lt; E &gt;.addAll</definition>
+        <argsstring>(int index, Collection&lt;? extends E &gt; c)</argsstring>
+        <name>addAll</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>Collection&lt;? extends E &gt;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Inserts all of the elements in the specified collection into this list, starting at the specified position. Shifts the element currently at that position (if any) and any subsequent elements to the right (increases their indices). The new elements will appear in the list in the order that they are returned by the specified collection&apos;s iterator.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index at which to insert the first element from the specified collection </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>collection containing elements to be added to this list </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><programlisting><codeline><highlight class="keyword">true</highlight><highlight class="normal"><sp/></highlight></codeline>
+</programlisting> if this list changed as a result of the call </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IndexOutOfBoundsException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>NullPointerException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the specified collection is null </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="730" column="20" bodyfile="ArrayList.java" bodystart="730" bodyend="751"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1a4c193422a068915ece463df0f75369cc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean java.util.ArrayList&lt; E &gt;.removeAll</definition>
+        <argsstring>(Collection&lt;?&gt; c)</argsstring>
+        <name>removeAll</name>
+        <param>
+          <type>Collection&lt;?&gt;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Removes from this list all of its elements that are contained in the specified collection.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>collection containing elements to be removed from this list </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><programlisting><codeline><highlight class="keyword">true</highlight><highlight class="normal"><sp/></highlight></codeline>
+</programlisting> if this list changed as a result of the call </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ClassCastException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the class of an element of this list is incompatible with the specified collection (<ulink url="Collection.html#optional-restrictions">optional</ulink>) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>NullPointerException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if this list contains a null element and the specified collection does not permit null elements (<ulink url="Collection.html#optional-restrictions">optional</ulink>), or if the specified collection is null </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>Collection::contains(Object) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="821" column="20" bodyfile="ArrayList.java" bodystart="821" bodyend="823"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1af875f8c34f0bc46ec4781775fe93bc84" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean java.util.ArrayList&lt; E &gt;.retainAll</definition>
+        <argsstring>(Collection&lt;?&gt; c)</argsstring>
+        <name>retainAll</name>
+        <param>
+          <type>Collection&lt;?&gt;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retains only the elements in this list that are contained in the specified collection. In other words, removes from this list all of its elements that are not contained in the specified collection.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>collection containing elements to be retained in this list </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><programlisting><codeline><highlight class="keyword">true</highlight><highlight class="normal"><sp/></highlight></codeline>
+</programlisting> if this list changed as a result of the call </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ClassCastException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the class of an element of this list is incompatible with the specified collection (<ulink url="Collection.html#optional-restrictions">optional</ulink>) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>NullPointerException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if this list contains a null element and the specified collection does not permit null elements (<ulink url="Collection.html#optional-restrictions">optional</ulink>), or if the specified collection is null </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>Collection::contains(Object) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="841" column="20" bodyfile="ArrayList.java" bodystart="841" bodyend="843"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1a015a6773d714a5ed43e7345d2f4eb955" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ListIterator&lt; E &gt;</type>
+        <definition>ListIterator&lt; E &gt; java.util.ArrayList&lt; E &gt;.listIterator</definition>
+        <argsstring>(int index)</argsstring>
+        <name>listIterator</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a list iterator over the elements in this list (in proper sequence), starting at the specified position in the list. The specified index indicates the first element that would be returned by an initial call to <ref refid="" kindref="compound">next</ref>. An initial call to <ref refid="" kindref="compound">previous</ref> would return the element with the specified index minus one.</para>
+<para>The returned list iterator is <ulink url="#fail-fast"><emphasis>fail-fast</emphasis></ulink>.</para>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IndexOutOfBoundsException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="951" column="25" bodyfile="ArrayList.java" bodystart="951" bodyend="954"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1a7d3c38140984e96caacc9e1e80fd068a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ListIterator&lt; E &gt;</type>
+        <definition>ListIterator&lt; E &gt; java.util.ArrayList&lt; E &gt;.listIterator</definition>
+        <argsstring>()</argsstring>
+        <name>listIterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a list iterator over the elements in this list (in proper sequence).</para>
+<para>The returned list iterator is <ulink url="#fail-fast"><emphasis>fail-fast</emphasis></ulink>.</para>
+<para><simplesect kind="see"><para><ref refid="classjava_1_1util_1_1_array_list_1a015a6773d714a5ed43e7345d2f4eb955" kindref="member">listIterator(int)</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="964" column="25" bodyfile="ArrayList.java" bodystart="964" bodyend="966"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1afd84f2da73c36b87bb524b00a5be0db1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Iterator&lt; E &gt;</type>
+        <definition>Iterator&lt; E &gt; java.util.ArrayList&lt; E &gt;.iterator</definition>
+        <argsstring>()</argsstring>
+        <name>iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns an iterator over the elements in this list in proper sequence.</para>
+<para>The returned iterator is <ulink url="#fail-fast"><emphasis>fail-fast</emphasis></ulink>.</para>
+<para><simplesect kind="return"><para>an iterator over the elements in this list in proper sequence </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="975" column="21" bodyfile="ArrayList.java" bodystart="975" bodyend="977"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1a05ca653d5dbf58fe56c5485c0b3bc4d4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; E &gt;</type>
+        <definition>List&lt; E &gt; java.util.ArrayList&lt; E &gt;.subList</definition>
+        <argsstring>(int fromIndex, int toIndex)</argsstring>
+        <name>subList</name>
+        <param>
+          <type>int</type>
+          <declname>fromIndex</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>toIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a view of the portion of this list between the specified <programlisting><codeline><highlight class="normal">fromIndex<sp/></highlight></codeline>
+</programlisting> , inclusive, and <programlisting><codeline><highlight class="normal">toIndex<sp/></highlight></codeline>
+</programlisting> , exclusive. (If <programlisting><codeline><highlight class="normal">fromIndex<sp/></highlight></codeline>
+</programlisting> and <programlisting><codeline><highlight class="normal">toIndex<sp/></highlight></codeline>
+</programlisting> are equal, the returned list is empty.) The returned list is backed by this list, so non-structural changes in the returned list are reflected in this list, and vice-versa. The returned list supports all of the optional list operations.</para>
+<para>This method eliminates the need for explicit range operations (of the sort that commonly exist for arrays). Any operation that expects a list can be used as a range operation by passing a subList view instead of a whole list. For example, the following idiom removes a range of elements from a list: <preformatted>
+     list.subList(from, to).<ref refid="classjava_1_1util_1_1_array_list_1aa607d32031984297108864c20b031a09" kindref="member">clear()</ref>;
+</preformatted> Similar idioms may be constructed for <ref refid="classjava_1_1util_1_1_array_list_1aee170e25c3df453eda3628ff784bf4e0" kindref="member">indexOf(Object)</ref> and <ref refid="classjava_1_1util_1_1_array_list_1a8b32d7954659694aa9ceb4f4bc6d644f" kindref="member">lastIndexOf(Object)</ref>, and all of the algorithms in the <ref refid="" kindref="compound">Collections</ref> class can be applied to a subList.</para>
+<para>The semantics of the list returned by this method become undefined if the backing list (i.e., this list) is <emphasis>structurally modified</emphasis> in any way other than via the returned list. (Structural modifications are those that change the size of this list, or otherwise perturb it in such a fashion that iterations in progress may yield incorrect results.)</para>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IndexOutOfBoundsException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>IllegalArgumentException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="1136" column="17" bodyfile="ArrayList.java" bodystart="1136" bodyend="1139"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1aa4443454b368db157fd6a0df9d5155c3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void java.util.ArrayList&lt; E &gt;.forEach</definition>
+        <argsstring>(Consumer&lt;? super E &gt; action)</argsstring>
+        <name>forEach</name>
+        <param>
+          <type>Consumer&lt;? super E &gt;</type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>NullPointerException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="1534" column="17" bodyfile="ArrayList.java" bodystart="1534" bodyend="1543"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1aaa20f006ed4e43e495939ed3c87bac31" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Spliterator&lt; E &gt;</type>
+        <definition>Spliterator&lt; E &gt; java.util.ArrayList&lt; E &gt;.spliterator</definition>
+        <argsstring>()</argsstring>
+        <name>spliterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a <emphasis><ulink url="Spliterator.html#binding">late-binding</ulink></emphasis> and <emphasis>fail-fast</emphasis> <ref refid="" kindref="compound">Spliterator</ref> over the elements in this list.</para>
+<para>The <programlisting><codeline><highlight class="normal">Spliterator<sp/></highlight></codeline>
+</programlisting> reports <ref refid="" kindref="compound">Spliterator#SIZED</ref>, <ref refid="" kindref="compound">Spliterator#SUBSIZED</ref>, and <ref refid="" kindref="compound">Spliterator#ORDERED</ref>. Overriding implementations should document the reporting of additional characteristic values.</para>
+<para><simplesect kind="return"><para>a <programlisting><codeline><highlight class="normal">Spliterator<sp/></highlight></codeline>
+</programlisting> over the elements in this list </para>
+</simplesect>
+<simplesect kind="since"><para>1.8 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="1559" column="24" bodyfile="ArrayList.java" bodystart="1559" bodyend="1561"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1a3f2b9269e6cbae0c5856603565223e93" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean java.util.ArrayList&lt; E &gt;.removeIf</definition>
+        <argsstring>(Predicate&lt;? super E &gt; filter)</argsstring>
+        <name>removeIf</name>
+        <param>
+          <type>Predicate&lt;? super E &gt;</type>
+          <declname>filter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>NullPointerException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="1688" column="20" bodyfile="ArrayList.java" bodystart="1688" bodyend="1690"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1a097d011a1aaca7fe7da475020b3393da" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void java.util.ArrayList&lt; E &gt;.replaceAll</definition>
+        <argsstring>(UnaryOperator&lt; E &gt; operator)</argsstring>
+        <name>replaceAll</name>
+        <param>
+          <type>UnaryOperator&lt; E &gt;</type>
+          <declname>operator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="1730" column="17" bodyfile="ArrayList.java" bodystart="1730" bodyend="1733"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1a4643a3462dd145d1c7e6fd636ed99264" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void java.util.ArrayList&lt; E &gt;.sort</definition>
+        <argsstring>(Comparator&lt;? super E &gt; c)</argsstring>
+        <name>sort</name>
+        <param>
+          <type>Comparator&lt;? super E &gt;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="1747" column="17" bodyfile="ArrayList.java" bodystart="1747" bodyend="1753"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1a9eaa68b291aa6dca05c7aba8e09b9f82" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Object[]</type>
+        <definition>Object[] java.util.ArrayList&lt; E &gt;.grow</definition>
+        <argsstring>(int minCapacity)</argsstring>
+        <name>grow</name>
+        <param>
+          <type>int</type>
+          <declname>minCapacity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Increases the capacity to ensure that it can hold at least the number of elements specified by the minimum capacity argument.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>minCapacity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the desired minimum capacity </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>OutOfMemoryError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if minCapacity is less than zero </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="236" column="20" bodyfile="ArrayList.java" bodystart="236" bodyend="239"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1aa838d0f42f3710efe957705d35a26721" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Object[]</type>
+        <definition>Object[] java.util.ArrayList&lt; E &gt;.grow</definition>
+        <argsstring>()</argsstring>
+        <name>grow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="241" column="20" bodyfile="ArrayList.java" bodystart="241" bodyend="243"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1a8d2ed6feff8a01a74d0af2daadfbf800" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int java.util.ArrayList&lt; E &gt;.newCapacity</definition>
+        <argsstring>(int minCapacity)</argsstring>
+        <name>newCapacity</name>
+        <param>
+          <type>int</type>
+          <declname>minCapacity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a capacity at least as large as the given minimum capacity. Returns the current capacity increased by 50% if that suffices. Will not return a capacity greater than MAX_ARRAY_SIZE unless the given minimum capacity is greater than MAX_ARRAY_SIZE.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>minCapacity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the desired minimum capacity </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>OutOfMemoryError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if minCapacity is less than zero </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="254" column="17" bodyfile="ArrayList.java" bodystart="254" bodyend="268"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1a6b12542cbf91b150c6a4216eb35bf1c0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void java.util.ArrayList&lt; E &gt;.add</definition>
+        <argsstring>(E e, Object[] elementData, int s)</argsstring>
+        <name>add</name>
+        <param>
+          <type>E</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>Object[]</type>
+          <declname>elementData</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This helper method split out from <ref refid="classjava_1_1util_1_1_array_list_1abd6c83f9b52fc889760c0ac0eeeb3514" kindref="member">add(E)</ref> to keep method bytecode size under 35 (the -XX:MaxInlineSize default value), which helps when <ref refid="classjava_1_1util_1_1_array_list_1abd6c83f9b52fc889760c0ac0eeeb3514" kindref="member">add(E)</ref> is called in a C1-compiled loop. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="483" column="18" bodyfile="ArrayList.java" bodystart="483" bodyend="488"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1ad17e93783cab41b0ce76d3ce9631c88b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean java.util.ArrayList&lt; E &gt;.equalsArrayList</definition>
+        <argsstring>(ArrayList&lt;?&gt; other)</argsstring>
+        <name>equalsArrayList</name>
+        <param>
+          <type><ref refid="classjava_1_1util_1_1_array_list" kindref="compound">ArrayList</ref>&lt;?&gt;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="581" column="21" bodyfile="ArrayList.java" bodystart="581" bodyend="600"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1a48e3927b9d6d6edaf6d3fdbf6de065c2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void java.util.ArrayList&lt; E &gt;.checkForComodification</definition>
+        <argsstring>(final int expectedModCount)</argsstring>
+        <name>checkForComodification</name>
+        <param>
+          <type>final int</type>
+          <declname>expectedModCount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="602" column="18" bodyfile="ArrayList.java" bodystart="602" bodyend="606"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1a5e5be34296c2dff8456e0c1ee2c1427c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void java.util.ArrayList&lt; E &gt;.fastRemove</definition>
+        <argsstring>(Object[] es, int i)</argsstring>
+        <name>fastRemove</name>
+        <param>
+          <type>Object[]</type>
+          <declname>es</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Private remove method that skips bounds checking and does not return the value removed. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="668" column="18" bodyfile="ArrayList.java" bodystart="668" bodyend="674"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1a76ac01dba55e0a20e07f32f3063554d6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void java.util.ArrayList&lt; E &gt;.shiftTailOverGap</definition>
+        <argsstring>(Object[] es, int lo, int hi)</argsstring>
+        <name>shiftTailOverGap</name>
+        <param>
+          <type>Object[]</type>
+          <declname>es</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>lo</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>hi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Erases the gap from lo to hi, by sliding down following elements. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="776" column="18" bodyfile="ArrayList.java" bodystart="776" bodyend="780"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1a88bacf7e7bc8fc7050355fb46cdf3628" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void java.util.ArrayList&lt; E &gt;.rangeCheckForAdd</definition>
+        <argsstring>(int index)</argsstring>
+        <name>rangeCheckForAdd</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A version of rangeCheck used by add and addAll. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="785" column="18" bodyfile="ArrayList.java" bodystart="785" bodyend="788"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1a4e0e23641ee35de18c83a1131df37033" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String java.util.ArrayList&lt; E &gt;.outOfBoundsMsg</definition>
+        <argsstring>(int index)</argsstring>
+        <name>outOfBoundsMsg</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs an IndexOutOfBoundsException detail message. Of the many possible refactorings of the error handling code, this &quot;outlining&quot; performs best with both server and client VMs. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="795" column="20" bodyfile="ArrayList.java" bodystart="795" bodyend="797"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1a1d33272ee295fafc6f865478150b005e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void java.util.ArrayList&lt; E &gt;.writeObject</definition>
+        <argsstring>(java.io.ObjectOutputStream s)</argsstring>
+        <name>writeObject</name>
+        <param>
+          <type>java.io.ObjectOutputStream</type>
+          <declname>s</declname>
+        </param>
+        <exceptions> throws java.io.IOException </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Saves the state of the <programlisting><codeline><highlight class="normal"><ref refid="classjava_1_1util_1_1_array_list_1a50fb40ee9ef69183738251e7f613301e" kindref="member">ArrayList</ref><sp/></highlight></codeline>
+</programlisting> instance to a stream (that is, serializes it).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the stream </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>java.io.IOException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if an I/O error occurs @serialData The length of the array backing the <programlisting><codeline><highlight class="normal"><ref refid="classjava_1_1util_1_1_array_list_1a50fb40ee9ef69183738251e7f613301e" kindref="member">ArrayList</ref><sp/></highlight></codeline>
+</programlisting> instance is emitted (int), followed by all of its elements (each an <programlisting><codeline><highlight class="normal">Object<sp/></highlight></codeline>
+</programlisting> ) in the proper order. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="885" column="18" bodyfile="ArrayList.java" bodystart="885" bodyend="902"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1acfbe8456028b4c0b5b6ba42e64a67850" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void java.util.ArrayList&lt; E &gt;.readObject</definition>
+        <argsstring>(java.io.ObjectInputStream s)</argsstring>
+        <name>readObject</name>
+        <param>
+          <type>java.io.ObjectInputStream</type>
+          <declname>s</declname>
+        </param>
+        <exceptions> throws java.io.IOException, ClassNotFoundException </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reconstitutes the <programlisting><codeline><highlight class="normal"><ref refid="classjava_1_1util_1_1_array_list_1a50fb40ee9ef69183738251e7f613301e" kindref="member">ArrayList</ref><sp/></highlight></codeline>
+</programlisting> instance from a stream (that is, deserializes it). <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the stream </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ClassNotFoundException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the class of a serialized object could not be found </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>java.io.IOException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if an I/O error occurs </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="912" column="18" bodyfile="ArrayList.java" bodystart="912" bodyend="937"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1a496dd19de15f7715f006c14a9dbca257" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void java.util.ArrayList&lt; E &gt;.replaceAllRange</definition>
+        <argsstring>(UnaryOperator&lt; E &gt; operator, int i, int end)</argsstring>
+        <name>replaceAllRange</name>
+        <param>
+          <type>UnaryOperator&lt; E &gt;</type>
+          <declname>operator</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="1735" column="18" bodyfile="ArrayList.java" bodystart="1735" bodyend="1743"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1a04fc4363dd3898391953d154ef8df8e0" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int java.util.ArrayList&lt; E &gt;.hugeCapacity</definition>
+        <argsstring>(int minCapacity)</argsstring>
+        <name>hugeCapacity</name>
+        <param>
+          <type>int</type>
+          <declname>minCapacity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="270" column="24" bodyfile="ArrayList.java" bodystart="270" bodyend="276"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1ab3849f2164d1767b18784aa9c807f69d" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String java.util.ArrayList&lt; E &gt;.outOfBoundsMsg</definition>
+        <argsstring>(int fromIndex, int toIndex)</argsstring>
+        <name>outOfBoundsMsg</name>
+        <param>
+          <type>int</type>
+          <declname>fromIndex</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>toIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A version used in checking (fromIndex &gt; toIndex) condition </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="802" column="27" bodyfile="ArrayList.java" bodystart="802" bodyend="804"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1a9f9817bf8989b9a521d6ec720de2d1a7" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>long[]</type>
+        <definition>static long[] java.util.ArrayList&lt; E &gt;.nBits</definition>
+        <argsstring>(int n)</argsstring>
+        <name>nBits</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="1674" column="25" bodyfile="ArrayList.java" bodystart="1674" bodyend="1676"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1a21031b09698e204518aadd05b420eaa4" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void java.util.ArrayList&lt; E &gt;.setBit</definition>
+        <argsstring>(long[] bits, int i)</argsstring>
+        <name>setBit</name>
+        <param>
+          <type>long[]</type>
+          <declname>bits</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="1677" column="25" bodyfile="ArrayList.java" bodystart="1677" bodyend="1679"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1a381e23f7daa1854aa1082b5c4c51b371" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>static boolean java.util.ArrayList&lt; E &gt;.isClear</definition>
+        <argsstring>(long[] bits, int i)</argsstring>
+        <name>isClear</name>
+        <param>
+          <type>long[]</type>
+          <declname>bits</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="1680" column="28" bodyfile="ArrayList.java" bodystart="1680" bodyend="1682"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-func">
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1aaf715d2cba694eea41babccae91da1af" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int java.util.ArrayList&lt; E &gt;.indexOfRange</definition>
+        <argsstring>(Object o, int start, int end)</argsstring>
+        <name>indexOfRange</name>
+        <param>
+          <type>Object</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="320" column="9" bodyfile="ArrayList.java" bodystart="320" bodyend="336"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1afd7166861e03f1254780658b6dc657f1" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int java.util.ArrayList&lt; E &gt;.lastIndexOfRange</definition>
+        <argsstring>(Object o, int start, int end)</argsstring>
+        <name>lastIndexOfRange</name>
+        <param>
+          <type>Object</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="349" column="9" bodyfile="ArrayList.java" bodystart="349" bodyend="365"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1a3aa30e083645bbd60d6d78287bdb6f24" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>public&lt; T &gt; T[]</type>
+        <definition>public&lt; T &gt; T[] java.util.ArrayList&lt; E &gt;.toArray</definition>
+        <argsstring>(T[] a)</argsstring>
+        <name>toArray</name>
+        <param>
+          <type>T[]</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns an array containing all of the elements in this list in proper sequence (from first to last element); the runtime type of the returned array is that of the specified array. If the list fits in the specified array, it is returned therein. Otherwise, a new array is allocated with the runtime type of the specified array and the size of this list.</para>
+<para>If the list fits in the specified array with room to spare (i.e., the array has more elements than the list), the element in the array immediately following the end of the collection is set to <programlisting><codeline><highlight class="keyword">null</highlight><highlight class="normal"><sp/></highlight></codeline>
+</programlisting> . (This is useful in determining the length of the list <emphasis>only</emphasis> if the caller knows that the list does not contain any null elements.)</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the array into which the elements of the list are to be stored, if it is big enough; otherwise, a new array of the same runtime type is allocated for this purpose. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>an array containing the elements of the list </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ArrayStoreException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the runtime type of the specified array is not a supertype of the runtime type of every element in this list </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>NullPointerException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the specified array is null </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="428" column="15" bodyfile="ArrayList.java" bodystart="428" bodyend="436"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1a1251b2b9a15fd86be7dd5caa66b7e33d" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>E</type>
+        <definition>E java.util.ArrayList&lt; E &gt;.elementData</definition>
+        <argsstring>(int index)</argsstring>
+        <name>elementData</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="441" column="7" bodyfile="ArrayList.java" bodystart="441" bodyend="443"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1ac2791f492fa2e0bfda9eec0501d73ac5" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>static&lt; E &gt; E</type>
+        <definition>static&lt; E &gt; E java.util.ArrayList&lt; E &gt;.elementAt</definition>
+        <argsstring>(Object[] es, int index)</argsstring>
+        <name>elementAt</name>
+        <param>
+          <type>Object[]</type>
+          <declname>es</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="446" column="15" bodyfile="ArrayList.java" bodystart="446" bodyend="448"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1a120f60c26b32d32d2c366fbbb5c88b5b" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean java.util.ArrayList&lt; E &gt;.equalsRange</definition>
+        <argsstring>(List&lt;?&gt; other, int from, int to)</argsstring>
+        <name>equalsRange</name>
+        <param>
+          <type>List&lt;?&gt;</type>
+          <declname>other</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>from</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>to</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="567" column="13" bodyfile="ArrayList.java" bodystart="567" bodyend="579"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1ae0d0fbbeee89a5441930acb684f4732a" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int java.util.ArrayList&lt; E &gt;.hashCodeRange</definition>
+        <argsstring>(int from, int to)</argsstring>
+        <name>hashCodeRange</name>
+        <param>
+          <type>int</type>
+          <declname>from</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>to</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="618" column="9" bodyfile="ArrayList.java" bodystart="618" bodyend="629"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1a6a25def70097459ad1e3c1a12fd27bb8" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean java.util.ArrayList&lt; E &gt;.batchRemove</definition>
+        <argsstring>(Collection&lt;?&gt; c, boolean complement, final int from, final int end)</argsstring>
+        <name>batchRemove</name>
+        <param>
+          <type>Collection&lt;?&gt;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>complement</declname>
+        </param>
+        <param>
+          <type>final int</type>
+          <declname>from</declname>
+        </param>
+        <param>
+          <type>final int</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="845" column="13" bodyfile="ArrayList.java" bodystart="845" bodyend="873"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1af53e1845a599b7539c26f1c832af706e" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean java.util.ArrayList&lt; E &gt;.removeIf</definition>
+        <argsstring>(Predicate&lt;? super E &gt; filter, int i, final int end)</argsstring>
+        <name>removeIf</name>
+        <param>
+          <type>Predicate&lt;? super E &gt;</type>
+          <declname>filter</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>final int</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Removes all elements satisfying the given predicate, from index i (inclusive) to index end (exclusive). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="1696" column="13" bodyfile="ArrayList.java" bodystart="1696" bodyend="1727"/>
+      </memberdef>
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1a21b432e7edbfe650885dc253dba9b083" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void java.util.ArrayList&lt; E &gt;.checkInvariants</definition>
+        <argsstring>()</argsstring>
+        <name>checkInvariants</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="1755" column="10" bodyfile="ArrayList.java" bodystart="1755" bodyend="1758"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classjava_1_1util_1_1_array_list_1a774a5c5ebc4b098a44a39a954e134ff5" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void java.util.ArrayList&lt; E &gt;.removeRange</definition>
+        <argsstring>(int fromIndex, int toIndex)</argsstring>
+        <name>removeRange</name>
+        <param>
+          <type>int</type>
+          <declname>fromIndex</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>toIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Removes from this list all of the elements whose index is between <programlisting><codeline><highlight class="normal">fromIndex<sp/></highlight></codeline>
+</programlisting> , inclusive, and <programlisting><codeline><highlight class="normal">toIndex<sp/></highlight></codeline>
+</programlisting> , exclusive. Shifts any succeeding elements to the left (reduces their index). This call shortens the list by <programlisting><codeline><highlight class="normal">(toIndex<sp/>-<sp/>fromIndex)<sp/></highlight></codeline>
+</programlisting> elements. (If <programlisting><codeline><highlight class="normal">toIndex==fromIndex<sp/></highlight></codeline>
+</programlisting> , this operation has no effect.)</para>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IndexOutOfBoundsException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if <programlisting><codeline><highlight class="normal">fromIndex<sp/></highlight></codeline>
+</programlisting> or <programlisting><codeline><highlight class="normal">toIndex<sp/></highlight></codeline>
+</programlisting> is out of range (<programlisting><codeline><highlight class="normal">fromIndex<sp/>&lt;<sp/>0<sp/>||</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>toIndex<sp/>&gt;<sp/>size()<sp/>||</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>toIndex<sp/>&lt;<sp/>fromIndex<sp/></highlight></codeline>
+</programlisting> ) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ArrayList.java" line="766" column="20" bodyfile="ArrayList.java" bodystart="766" bodyend="773"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Resizable-array implementation of the <programlisting><codeline><highlight class="normal">List<sp/></highlight></codeline>
+</programlisting> interface. Implements all optional list operations, and permits all elements, including <programlisting><codeline><highlight class="keyword">null</highlight><highlight class="normal"><sp/></highlight></codeline>
+</programlisting> . In addition to implementing the <programlisting><codeline><highlight class="normal">List<sp/></highlight></codeline>
+</programlisting> interface, this class provides methods to manipulate the size of the array that is used internally to store the list. (This class is roughly equivalent to <programlisting><codeline><highlight class="normal">Vector<sp/></highlight></codeline>
+</programlisting> , except that it is unsynchronized.)</para>
+<para>The <programlisting><codeline><highlight class="normal">size<sp/></highlight></codeline>
+</programlisting> , <programlisting><codeline><highlight class="normal"><ref refid="classjava_1_1util_1_1_array_list_1a89cb90408a8b5c55fb7ae1bd69452e30" kindref="member">isEmpty</ref><sp/></highlight></codeline>
+</programlisting> , <programlisting><codeline><highlight class="keyword">get</highlight><highlight class="normal"><sp/></highlight></codeline>
+</programlisting> , <programlisting><codeline><highlight class="keyword">set</highlight><highlight class="normal"><sp/></highlight></codeline>
+</programlisting> , <programlisting><codeline><highlight class="normal"><ref refid="classjava_1_1util_1_1_array_list_1afd84f2da73c36b87bb524b00a5be0db1" kindref="member">iterator</ref><sp/></highlight></codeline>
+</programlisting> , and <programlisting><codeline><highlight class="normal"><ref refid="classjava_1_1util_1_1_array_list_1a7d3c38140984e96caacc9e1e80fd068a" kindref="member">listIterator</ref><sp/></highlight></codeline>
+</programlisting> operations run in constant time. The <programlisting><codeline><highlight class="normal">add<sp/></highlight></codeline>
+</programlisting> operation runs in <emphasis>amortized constant time</emphasis>, that is, adding n elements requires O(n) time. All of the other operations run in linear time (roughly speaking). The constant factor is low compared to that for the <programlisting><codeline><highlight class="normal">LinkedList<sp/></highlight></codeline>
+</programlisting> implementation.</para>
+<para>Each <programlisting><codeline><highlight class="normal"><ref refid="classjava_1_1util_1_1_array_list_1a50fb40ee9ef69183738251e7f613301e" kindref="member">ArrayList</ref><sp/></highlight></codeline>
+</programlisting> instance has a <emphasis>capacity</emphasis>. The capacity is the size of the array used to store the elements in the list. It is always at least as large as the list size. As elements are added to an <ref refid="classjava_1_1util_1_1_array_list" kindref="compound">ArrayList</ref>, its capacity grows automatically. The details of the growth policy are not specified beyond the fact that adding an element has constant amortized time cost.</para>
+<para>An application can increase the capacity of an <programlisting><codeline><highlight class="normal"><ref refid="classjava_1_1util_1_1_array_list_1a50fb40ee9ef69183738251e7f613301e" kindref="member">ArrayList</ref><sp/></highlight></codeline>
+</programlisting> instance before adding a large number of elements using the <programlisting><codeline><highlight class="normal"><ref refid="classjava_1_1util_1_1_array_list_1a071e6ee16f1f6edf0c3795c14d6127a8" kindref="member">ensureCapacity</ref><sp/></highlight></codeline>
+</programlisting> operation. This may reduce the amount of incremental reallocation.</para>
+<para><bold>Note that this implementation is not synchronized.</bold> If multiple threads access an <programlisting><codeline><highlight class="normal"><ref refid="classjava_1_1util_1_1_array_list_1a50fb40ee9ef69183738251e7f613301e" kindref="member">ArrayList</ref><sp/></highlight></codeline>
+</programlisting> instance concurrently, and at least one of the threads modifies the list structurally, it <emphasis>must</emphasis> be synchronized externally. (A structural modification is any operation that adds or deletes one or more elements, or explicitly resizes the backing array; merely setting the value of an element is not a structural modification.) This is typically accomplished by synchronizing on some object that naturally encapsulates the list.</para>
+<para>If no such object exists, the list should be &quot;wrapped&quot; using the <ref refid="" kindref="compound">Collections.synchronizedList</ref> method. This is best done at creation time, to prevent accidental unsynchronized access to the list:<preformatted>
+  List list = Collections.synchronizedList(new ArrayList(...));</preformatted></para>
+<para></para>
+<para>The iterators returned by this class&apos;s <ref refid="classjava_1_1util_1_1_array_list_1afd84f2da73c36b87bb524b00a5be0db1" kindref="member">iterator</ref> and <ref refid="classjava_1_1util_1_1_array_list_1a015a6773d714a5ed43e7345d2f4eb955" kindref="member">listIterator</ref> methods are <emphasis>fail-fast</emphasis>: if the list is structurally modified at any time after the iterator is created, in any way except through the iterator&apos;s own <ref refid="" kindref="compound">remove</ref> or <ref refid="" kindref="compound">add</ref> methods, the iterator will throw a <ref refid="" kindref="compound">ConcurrentModificationException</ref>. Thus, in the face of concurrent modification, the iterator fails quickly and cleanly, rather than risking arbitrary, non-deterministic behavior at an undetermined time in the future.</para>
+<para>Note that the fail-fast behavior of an iterator cannot be guaranteed as it is, generally speaking, impossible to make any hard guarantees in the presence of unsynchronized concurrent modification. Fail-fast iterators throw <programlisting><codeline><highlight class="normal">ConcurrentModificationException<sp/></highlight></codeline>
+</programlisting> on a best-effort basis. Therefore, it would be wrong to write a program that depended on this exception for its correctness: <emphasis>the fail-fast behavior of iterators should be used only to detect bugs.</emphasis></para>
+<para>This class is a member of the <ulink url="{@docRoot}/java.base/java/util/package-summary.html#CollectionsFramework">Java Collections Framework</ulink>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>&lt;E&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the type of elements in this list</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Josh Bloch </para>
+</simplesect>
+<simplesect kind="author"><para>Neal Gafter </para>
+</simplesect>
+<simplesect kind="see"><para>Collection </para>
+</simplesect>
+<simplesect kind="see"><para>List </para>
+</simplesect>
+<simplesect kind="see"><para>LinkedList </para>
+</simplesect>
+<simplesect kind="see"><para>Vector </para>
+</simplesect>
+<simplesect kind="since"><para>1.2 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>AbstractList&lt; E &gt;</label>
+      </node>
+      <node id="5">
+        <label>Cloneable</label>
+      </node>
+      <node id="3">
+        <label>List&lt; E &gt;</label>
+      </node>
+      <node id="4">
+        <label>RandomAccess</label>
+      </node>
+      <node id="1">
+        <label>java.util.ArrayList&lt; E &gt;</label>
+        <link refid="classjava_1_1util_1_1_array_list"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>java::io::Serializable</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>AbstractList&lt; E &gt;</label>
+      </node>
+      <node id="5">
+        <label>Cloneable</label>
+      </node>
+      <node id="3">
+        <label>List&lt; E &gt;</label>
+      </node>
+      <node id="4">
+        <label>RandomAccess</label>
+      </node>
+      <node id="1">
+        <label>java.util.ArrayList&lt; E &gt;</label>
+        <link refid="classjava_1_1util_1_1_array_list"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>java::io::Serializable</label>
+      </node>
+    </collaborationgraph>
+    <location file="ArrayList.java" line="108" column="7" bodyfile="ArrayList.java" bodystart="110" bodyend="1759"/>
+    <listofallmembers>
+      <member refid="classjava_1_1util_1_1_array_list_1a6b12542cbf91b150c6a4216eb35bf1c0" prot="private" virt="non-virtual"><scope>java::util::ArrayList</scope><name>add</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1abd6c83f9b52fc889760c0ac0eeeb3514" prot="public" virt="non-virtual"><scope>java::util::ArrayList</scope><name>add</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1ae429d4d5322c76a9f7f9d6cf9a698c8a" prot="public" virt="non-virtual"><scope>java::util::ArrayList</scope><name>add</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1a4a27fe3dfc816acb32582b7025069935" prot="public" virt="non-virtual"><scope>java::util::ArrayList</scope><name>addAll</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1a75e0c82eae78f49fe5b738f851f000ba" prot="public" virt="non-virtual"><scope>java::util::ArrayList</scope><name>addAll</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1adaea4255934eb868f9abff20d0d7eb62" prot="public" virt="non-virtual"><scope>java::util::ArrayList</scope><name>ArrayList</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1a50fb40ee9ef69183738251e7f613301e" prot="public" virt="non-virtual"><scope>java::util::ArrayList</scope><name>ArrayList</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1a7c1dacbd9bed44a2eb8dc240e42667c0" prot="public" virt="non-virtual"><scope>java::util::ArrayList</scope><name>ArrayList</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1a6a25def70097459ad1e3c1a12fd27bb8" prot="package" virt="non-virtual"><scope>java::util::ArrayList</scope><name>batchRemove</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1a48e3927b9d6d6edaf6d3fdbf6de065c2" prot="private" virt="non-virtual"><scope>java::util::ArrayList</scope><name>checkForComodification</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1a21b432e7edbfe650885dc253dba9b083" prot="package" virt="non-virtual"><scope>java::util::ArrayList</scope><name>checkInvariants</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1aa607d32031984297108864c20b031a09" prot="public" virt="non-virtual"><scope>java::util::ArrayList</scope><name>clear</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1a6fc2f71289b8ce4daaf480c48fecd3e9" prot="public" virt="non-virtual"><scope>java::util::ArrayList</scope><name>clone</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1ae060a010246638f3ff4749ffe0b62bab" prot="public" virt="non-virtual"><scope>java::util::ArrayList</scope><name>contains</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1ad3c466fef8ac72c28f6765d035cfc639" prot="private" virt="non-virtual"><scope>java::util::ArrayList</scope><name>DEFAULT_CAPACITY</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1a36f63f677717a8d151d6fc80dd7a0c12" prot="private" virt="non-virtual"><scope>java::util::ArrayList</scope><name>DEFAULTCAPACITY_EMPTY_ELEMENTDATA</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1ac2791f492fa2e0bfda9eec0501d73ac5" prot="package" virt="non-virtual"><scope>java::util::ArrayList</scope><name>elementAt</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1ad7c4762ac473fcba014fc5c5bb6a2946" prot="package" virt="non-virtual"><scope>java::util::ArrayList</scope><name>elementData</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1a1251b2b9a15fd86be7dd5caa66b7e33d" prot="package" virt="non-virtual"><scope>java::util::ArrayList</scope><name>elementData</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1ad662cd8025893653ef2c6c6cae5cc278" prot="private" virt="non-virtual"><scope>java::util::ArrayList</scope><name>EMPTY_ELEMENTDATA</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1a071e6ee16f1f6edf0c3795c14d6127a8" prot="public" virt="non-virtual"><scope>java::util::ArrayList</scope><name>ensureCapacity</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1a336addce74eadff4e0f75eb7750653b5" prot="public" virt="non-virtual"><scope>java::util::ArrayList</scope><name>equals</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1ad17e93783cab41b0ce76d3ce9631c88b" prot="private" virt="non-virtual"><scope>java::util::ArrayList</scope><name>equalsArrayList</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1a120f60c26b32d32d2c366fbbb5c88b5b" prot="package" virt="non-virtual"><scope>java::util::ArrayList</scope><name>equalsRange</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1a5e5be34296c2dff8456e0c1ee2c1427c" prot="private" virt="non-virtual"><scope>java::util::ArrayList</scope><name>fastRemove</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1aa4443454b368db157fd6a0df9d5155c3" prot="public" virt="non-virtual"><scope>java::util::ArrayList</scope><name>forEach</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1a2a0f35b259bd3ca95ca8f27ae21b9067" prot="public" virt="non-virtual"><scope>java::util::ArrayList</scope><name>get</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1a9eaa68b291aa6dca05c7aba8e09b9f82" prot="private" virt="non-virtual"><scope>java::util::ArrayList</scope><name>grow</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1aa838d0f42f3710efe957705d35a26721" prot="private" virt="non-virtual"><scope>java::util::ArrayList</scope><name>grow</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1a842cf9bcce33f486ae9b4783d2307703" prot="public" virt="non-virtual"><scope>java::util::ArrayList</scope><name>hashCode</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1ae0d0fbbeee89a5441930acb684f4732a" prot="package" virt="non-virtual"><scope>java::util::ArrayList</scope><name>hashCodeRange</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1a04fc4363dd3898391953d154ef8df8e0" prot="private" virt="non-virtual"><scope>java::util::ArrayList</scope><name>hugeCapacity</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1aee170e25c3df453eda3628ff784bf4e0" prot="public" virt="non-virtual"><scope>java::util::ArrayList</scope><name>indexOf</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1aaf715d2cba694eea41babccae91da1af" prot="package" virt="non-virtual"><scope>java::util::ArrayList</scope><name>indexOfRange</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1a381e23f7daa1854aa1082b5c4c51b371" prot="private" virt="non-virtual"><scope>java::util::ArrayList</scope><name>isClear</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1a89cb90408a8b5c55fb7ae1bd69452e30" prot="public" virt="non-virtual"><scope>java::util::ArrayList</scope><name>isEmpty</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1afd84f2da73c36b87bb524b00a5be0db1" prot="public" virt="non-virtual"><scope>java::util::ArrayList</scope><name>iterator</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1a8b32d7954659694aa9ceb4f4bc6d644f" prot="public" virt="non-virtual"><scope>java::util::ArrayList</scope><name>lastIndexOf</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1afd7166861e03f1254780658b6dc657f1" prot="package" virt="non-virtual"><scope>java::util::ArrayList</scope><name>lastIndexOfRange</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1a015a6773d714a5ed43e7345d2f4eb955" prot="public" virt="non-virtual"><scope>java::util::ArrayList</scope><name>listIterator</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1a7d3c38140984e96caacc9e1e80fd068a" prot="public" virt="non-virtual"><scope>java::util::ArrayList</scope><name>listIterator</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1a5082aae25ff63ad53ec52c6011553e85" prot="private" virt="non-virtual"><scope>java::util::ArrayList</scope><name>MAX_ARRAY_SIZE</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1a9f9817bf8989b9a521d6ec720de2d1a7" prot="private" virt="non-virtual"><scope>java::util::ArrayList</scope><name>nBits</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1a8d2ed6feff8a01a74d0af2daadfbf800" prot="private" virt="non-virtual"><scope>java::util::ArrayList</scope><name>newCapacity</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1a4e0e23641ee35de18c83a1131df37033" prot="private" virt="non-virtual"><scope>java::util::ArrayList</scope><name>outOfBoundsMsg</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1ab3849f2164d1767b18784aa9c807f69d" prot="private" virt="non-virtual"><scope>java::util::ArrayList</scope><name>outOfBoundsMsg</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1a88bacf7e7bc8fc7050355fb46cdf3628" prot="private" virt="non-virtual"><scope>java::util::ArrayList</scope><name>rangeCheckForAdd</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1acfbe8456028b4c0b5b6ba42e64a67850" prot="private" virt="non-virtual"><scope>java::util::ArrayList</scope><name>readObject</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1a4828dbd75167ac907cdbd8660b961ea3" prot="public" virt="non-virtual"><scope>java::util::ArrayList</scope><name>remove</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1a7a894c2a2434280f8170387d48b861d3" prot="public" virt="non-virtual"><scope>java::util::ArrayList</scope><name>remove</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1a4c193422a068915ece463df0f75369cc" prot="public" virt="non-virtual"><scope>java::util::ArrayList</scope><name>removeAll</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1a3f2b9269e6cbae0c5856603565223e93" prot="public" virt="non-virtual"><scope>java::util::ArrayList</scope><name>removeIf</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1af53e1845a599b7539c26f1c832af706e" prot="package" virt="non-virtual"><scope>java::util::ArrayList</scope><name>removeIf</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1a774a5c5ebc4b098a44a39a954e134ff5" prot="protected" virt="non-virtual"><scope>java::util::ArrayList</scope><name>removeRange</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1a097d011a1aaca7fe7da475020b3393da" prot="public" virt="non-virtual"><scope>java::util::ArrayList</scope><name>replaceAll</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1a496dd19de15f7715f006c14a9dbca257" prot="private" virt="non-virtual"><scope>java::util::ArrayList</scope><name>replaceAllRange</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1af875f8c34f0bc46ec4781775fe93bc84" prot="public" virt="non-virtual"><scope>java::util::ArrayList</scope><name>retainAll</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1a1c3c7f2cec17c4e979e167cf3c66bb55" prot="private" virt="non-virtual"><scope>java::util::ArrayList</scope><name>serialVersionUID</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1a5f7c1a0bd37927909cc3c08e99486de6" prot="public" virt="non-virtual"><scope>java::util::ArrayList</scope><name>set</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1a21031b09698e204518aadd05b420eaa4" prot="private" virt="non-virtual"><scope>java::util::ArrayList</scope><name>setBit</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1a76ac01dba55e0a20e07f32f3063554d6" prot="private" virt="non-virtual"><scope>java::util::ArrayList</scope><name>shiftTailOverGap</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1ae901fcea3ff0c5c6b35e32bc99c73414" prot="private" virt="non-virtual"><scope>java::util::ArrayList</scope><name>size</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1aa1f83fdecc8f4f7335deb0309a47dff3" prot="public" virt="non-virtual"><scope>java::util::ArrayList</scope><name>size</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1a4643a3462dd145d1c7e6fd636ed99264" prot="public" virt="non-virtual"><scope>java::util::ArrayList</scope><name>sort</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1aaa20f006ed4e43e495939ed3c87bac31" prot="public" virt="non-virtual"><scope>java::util::ArrayList</scope><name>spliterator</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1a05ca653d5dbf58fe56c5485c0b3bc4d4" prot="public" virt="non-virtual"><scope>java::util::ArrayList</scope><name>subList</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1acf3b031fbe639f574bc4c2007ab35c4b" prot="public" virt="non-virtual"><scope>java::util::ArrayList</scope><name>toArray</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1a3aa30e083645bbd60d6d78287bdb6f24" prot="package" virt="non-virtual"><scope>java::util::ArrayList</scope><name>toArray</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1afe1e26a716512bf0179f2f97b04ff0d3" prot="public" virt="non-virtual"><scope>java::util::ArrayList</scope><name>trimToSize</name></member>
+      <member refid="classjava_1_1util_1_1_array_list_1a1d33272ee295fafc6f865478150b005e" prot="private" virt="non-virtual"><scope>java::util::ArrayList</scope><name>writeObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

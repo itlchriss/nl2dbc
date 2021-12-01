@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_student__complete" kind="class" language="Java" prot="public">
+    <compoundname>Student_complete</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_student__complete_1a9ab1d69a4f139b4e27208cfe0fabaea9" prot="public" static="no" mutable="no">
+        <type>String</type>
+        <definition>String Student_complete::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The length of the value should always be less than 10 and contain alphabets only. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Student_complete.java" line="11" column="15" bodyfile="Student_complete.java" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_student__complete_1ab0f2ad07f91d52d8d5e6ff19176187e7" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Student_complete::studentNumber</definition>
+        <argsstring></argsstring>
+        <name>studentNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The value should be greater than zero and less than 100. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Student_complete.java" line="17" column="12" bodyfile="Student_complete.java" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_student__complete_1afea138addeb710aaef4c2ba3f54ff990" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Student_complete.Student</definition>
+        <argsstring>()</argsstring>
+        <name>Student</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the name must be equal to &quot;a&quot; and the studentNumber must be equal to 1. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Student_complete.java" line="22" column="8" bodyfile="Student_complete.java" bodystart="22" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_student__complete_1a70333fa791f00c65120bd2eb147a8255" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Student_complete.setName</definition>
+        <argsstring>(String _name)</argsstring>
+        <name>setName</name>
+        <param>
+          <type>String</type>
+          <declname>_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the name of this <ref refid="class_student" kindref="compound">Student</ref>. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value should not be null. The length of the value should be less than 50. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Student_complete.java" line="31" column="13" bodyfile="Student_complete.java" bodystart="31" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_student__complete_1ac92aabc857613d0ba583fc1d674e1048" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String Student_complete.getName</definition>
+        <argsstring>()</argsstring>
+        <name>getName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the name of this <ref refid="class_student" kindref="compound">Student</ref>. <simplesect kind="return"><para>the value should not be null. The length of the value should be less than 50. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Student_complete.java" line="39" column="15" bodyfile="Student_complete.java" bodystart="39" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_student__complete_1a687768c416bf319ceb9b83525b633ac0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Student_complete.setStudentNumber</definition>
+        <argsstring>(int number)</argsstring>
+        <name>setStudentNumber</name>
+        <param>
+          <type>int</type>
+          <declname>number</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the studentNumber of this <ref refid="class_student" kindref="compound">Student</ref>. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value should be greater than zero and less than 100. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Student_complete.java" line="47" column="13" bodyfile="Student_complete.java" bodystart="47" bodyend="49"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_student__complete_1a915ed8868dde10d08bd3810ca0f7b8ea" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Student_complete.main</definition>
+        <argsstring>(String[] args)</argsstring>
+        <name>main</name>
+        <param>
+          <type>String[]</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Student_complete.java" line="51" column="24" bodyfile="Student_complete.java" bodystart="51" bodyend="56"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Represents a student enrolled in the school. A student can be enrolled in many courses. </para>
+    </detaileddescription>
+    <location file="Student_complete.java" line="5" column="7" bodyfile="Student_complete.java" bodystart="5" bodyend="58"/>
+    <listofallmembers>
+      <member refid="class_student__complete_1ac92aabc857613d0ba583fc1d674e1048" prot="public" virt="non-virtual"><scope>Student_complete</scope><name>getName</name></member>
+      <member refid="class_student__complete_1a915ed8868dde10d08bd3810ca0f7b8ea" prot="public" virt="non-virtual"><scope>Student_complete</scope><name>main</name></member>
+      <member refid="class_student__complete_1a9ab1d69a4f139b4e27208cfe0fabaea9" prot="public" virt="non-virtual"><scope>Student_complete</scope><name>name</name></member>
+      <member refid="class_student__complete_1a70333fa791f00c65120bd2eb147a8255" prot="public" virt="non-virtual"><scope>Student_complete</scope><name>setName</name></member>
+      <member refid="class_student__complete_1a687768c416bf319ceb9b83525b633ac0" prot="public" virt="non-virtual"><scope>Student_complete</scope><name>setStudentNumber</name></member>
+      <member refid="class_student__complete_1afea138addeb710aaef4c2ba3f54ff990" prot="public" virt="non-virtual"><scope>Student_complete</scope><name>Student</name></member>
+      <member refid="class_student__complete_1ab0f2ad07f91d52d8d5e6ff19176187e7" prot="public" virt="non-virtual"><scope>Student_complete</scope><name>studentNumber</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

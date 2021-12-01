@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_student" kind="class" language="Java" prot="public">
+    <compoundname>Student</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_student_1a86c7327634259a0d0b7606da2c6d532d" prot="public" static="no" mutable="no">
+        <type>String</type>
+        <definition>String Student::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The length of the value should always be less than 50. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Student.java" line="6" column="15" bodyfile="Student.java" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_student_1af010eb389595d95cd715fb60ddc5b0bf" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>String Student::studentNumber</definition>
+        <argsstring></argsstring>
+        <name>studentNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The value should always be greater than 0 and less than 100. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Student.java" line="11" column="12" bodyfile="Student.java" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_student_1af62b0b32bd1d454aae8ecfb5410ebb02" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Student.Student</definition>
+        <argsstring>()</argsstring>
+        <name>Student</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Student.java" line="13" column="8" bodyfile="Student.java" bodystart="13" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_student_1acdea3399f230b281ad99394f3a3d53e4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Student.setName</definition>
+        <argsstring>(String name)</argsstring>
+        <name>setName</name>
+        <param>
+          <type>String</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the name of this <ref refid="class_student" kindref="compound">Student</ref>. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value should not be null. The length of the value should be less than 100. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Student.java" line="21" column="13" bodyfile="Student.java" bodystart="21" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_student_1a052aa1a669391c4946c66d09bd755e95" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String Student.getName</definition>
+        <argsstring>()</argsstring>
+        <name>getName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the name of this <ref refid="class_student" kindref="compound">Student</ref>. <simplesect kind="return"><para>the value should not be null. The length of the value should be less than 50. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Student.java" line="28" column="15" bodyfile="Student.java" bodystart="28" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_student_1a2357b8786a2e1eb6d3b4f9d4723e350b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Student.setStudentNumber</definition>
+        <argsstring>(int number)</argsstring>
+        <name>setStudentNumber</name>
+        <param>
+          <type>int</type>
+          <declname>number</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the studentNumber of this <ref refid="class_student" kindref="compound">Student</ref>. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value should be greater than zero and less than 100. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Student.java" line="35" column="13" bodyfile="Student.java" bodystart="35" bodyend="37"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_student_1ac0d45fe624a6c134a04cda46f68cdbb0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Student.main</definition>
+        <argsstring>(String[] args)</argsstring>
+        <name>main</name>
+        <param>
+          <type>String[]</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Student.java" line="39" column="20" bodyfile="Student.java" bodystart="39" bodyend="44"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Student.java" line="1" column="7" bodyfile="Student.java" bodystart="1" bodyend="45"/>
+    <listofallmembers>
+      <member refid="class_student_1a052aa1a669391c4946c66d09bd755e95" prot="public" virt="non-virtual"><scope>Student</scope><name>getName</name></member>
+      <member refid="class_student_1ac0d45fe624a6c134a04cda46f68cdbb0" prot="public" virt="non-virtual"><scope>Student</scope><name>main</name></member>
+      <member refid="class_student_1a86c7327634259a0d0b7606da2c6d532d" prot="public" virt="non-virtual"><scope>Student</scope><name>name</name></member>
+      <member refid="class_student_1acdea3399f230b281ad99394f3a3d53e4" prot="public" virt="non-virtual"><scope>Student</scope><name>setName</name></member>
+      <member refid="class_student_1a2357b8786a2e1eb6d3b4f9d4723e350b" prot="public" virt="non-virtual"><scope>Student</scope><name>setStudentNumber</name></member>
+      <member refid="class_student_1af62b0b32bd1d454aae8ecfb5410ebb02" prot="public" virt="non-virtual"><scope>Student</scope><name>Student</name></member>
+      <member refid="class_student_1af010eb389595d95cd715fb60ddc5b0bf" prot="public" virt="non-virtual"><scope>Student</scope><name>studentNumber</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
